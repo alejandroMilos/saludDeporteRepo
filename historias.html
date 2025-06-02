@@ -26,33 +26,21 @@
         <button class="carousel-btn left-btn">&#10094;</button>
         <div class="carousel-track">
           <div class="carousel-item center">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/9gCAxDtUn5E" 
-                      title="Historias que inspiran"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen>
-              </iframe>
+            <div class="video-container" data-video-id="9gCAxDtUn5E" onclick="loadVideo(this)">
+              <img class="video-thumbnail" src="poster-jerry.png" alt="Jerry Galindo">              
+              <div class="play-button">&#9658;</div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/AfQXwr2tvK0" 
-                      title="Historias que Inspiran"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen>
-              </iframe>
+            <div class="video-container" data-video-id="AfQXwr2tvK0" onclick="loadVideo(this)">
+              <img class="video-thumbnail" src="poster-alexia.png" alt="Alexia Villanueva">              
+              <div class="play-button">&#9658;</div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/bhENxoOq2lk" 
-                      title="Historias que Inspiran"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen>
-              </iframe>
+            <div class="video-container" data-video-id="bhENxoOq2lk" onclick="loadVideo(this)">
+              <img class="video-thumbnail" src="poster-olaf.png" alt="Olaf">              
+              <div class="play-button">&#9658;</div>
             </div>
           </div>
         </div>
@@ -92,6 +80,24 @@
   });
 
   updateCarousel();
+
+  function loadVideo(container) {
+    const videoId = container.getAttribute('data-video-id');
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.style.position = 'absolute';
+    iframe.style.top = 0;
+    iframe.style.left = 0;
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+
+    container.innerHTML = '';
+    container.appendChild(iframe);
+  }
 </script>
 
 </body>
