@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pasión Que Sana | J&J MedTech México</h1>
+    </header>
+  
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="historias.html">Historias</a>
+        <a href="salud.html">Salud</a>
+        <a href="webinar.html">Webinar</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="unete.html">Únete</a>
+        <a href="prensa.html">Prensa</a>
+    </nav>
+  
+    <main>
+        <section class="unete-libro">
+            <div class="unete-img">
+                <img src="img-unete.png" alt="Imagen Únete">
+            </div>
+            <div class="unete-contenido">
+                <div class="pagina pagina-activa" id="pagina1">
+                    <h2>Conviértete en embajador de la salud y comparte tu historia</h2>
+                    <p>
+                        <b>Pasión Que Sana</b> no es solo una campaña, es una comunidad viva que se construye con historias reales,
+                        esfuerzos compartidos y pasión por el deporte.
+                    </p>
+                    <p>
+                        ¿Eres atleta, médico, entrenador, padre de familia, estudiante o simplemente alguien que ha vivido una
+                        experiencia transformadora gracias al cuidado de tu salud física o mental? ¡Queremos escucharte!
+                    </p>
+                </div>
+                
+                <div class="pagina" id="pagina2">
+                    <h3>Cuéntanos tu historia</h3>
+                    <p>
+                        Cada testimonio es una oportunidad para inspirar a otros. Comparte cómo enfrentaste un reto físico, superaste
+                        una lesión, cuidaste tu salud mental o cómo la tecnología médica cambió tu vida deportiva.
+                    </p>
+
+                    <h3>Fomra parte de nuestra red de embajadores</h3>
+                    <p>
+                        Te conviertes en portavoz de un movimiento que promueve la salud y la innovación. Recibirás acceso a webinars,
+                        talleres y más.
+                    </p>
+                </div>
+
+                <div class="pagina" id="pagina3">
+                    <h3>Inspira a nuevas generaciones</h3>
+                    <p>
+                        Tu historia puede motivar a alguien más a cuidarse o buscar ayuda médica. Detrás de cada logro deportivo, hay
+                        una historia de ciencia y voluntad.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="#" class="btn">Quiero ser embajador</a>
+                        <a href="#" class="btn">Comparte tu historia</a>
+                    </div>
+                </div>
+
+                <div class="navegacion-paginas">
+                    <button onclick="cambiarPagina(-1)">←</button>
+                    <span id="contador-pagina">1 / 3</span>
+                    <button onclick="cambiarPagina(1)">→</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Johnson & Johnson MedTech México</p>
+    </footer>
+
+    <script>
+        let paginaActual = 1;
+        const totalPaginas = 3;
+
+        function cambiarPagina(direccion) {
+            document.getElementById('pagina' + paginaActual).classList.remove('pagina-activa');
+            paginaActual += direccion;
+            if (paginaActual > totalPaginas) paginaActual = 1;
+            if (paginaActual < 1) paginaActual = totalPaginas;
+            document.getElementById('pagina' + paginaActual).classList.add('pagina-activa');
+            document.getElementById('contador-pagina').innerText = paginaActual + ' / ' + totalPaginas;
+        }
+    </script>
+</body>
+</html>

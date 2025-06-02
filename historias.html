@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Pasión Que Sana | J&J MedTech México</h1>
+  </header>
+  
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historias.html">Historias</a>
+    <a href="salud.html">Salud</a>
+    <a href="webinar.html">Webinar</a>
+    <a href="tecnologia.html">Tecnología</a>
+    <a href="unete.html">Únete</a>
+    <a href="prensa.html">Prensa</a>
+  </nav>
+  
+  <main>
+    <section class="historias-carousel-section">
+      <h2 class="historias-carousel-titulo">Historias que Inspiran</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left-btn">&#10094;</button>
+        <div class="carousel-track">
+          <div class="carousel-item center">
+            <video controls poster="poster-jerry.png">
+              <source src="jerry.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video controls poster="poster-alexia.png">
+              <source src="alexia.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video controls poster="poster-olaf.png">
+              <source src="olaf.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="carousel-btn right-btn">&#10095;</button>
+      </div>
+    </section>
+  </main>
+    
+  <footer>
+    <p>&copy; 2025 Johnson & Johnson MedTech México</p>
+  </footer>
+
+  <script>
+  const track = document.querySelector('.carousel-track');
+  const items = Array.from(track.children);
+  let currentIndex = 1;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.remove('center');
+    });
+
+    items[currentIndex].classList.add('center');
+
+    const itemWidth = items[currentIndex].offsetWidth + 32;
+    const offset = (itemWidth * currentIndex) - (track.offsetWidth / 2) + (itemWidth / 2);
+  }
+
+  document.querySelector('.left-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  });
+
+  document.querySelector('.right-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+</script>
+
+</body>
+</html>

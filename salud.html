@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pasión Que Sana | J&J MedTech México</h1>
+    </header>
+  
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="historias.html">Historias</a>
+        <a href="salud.html">Salud</a>
+        <a href="webinar.html">Webinar</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="unete.html">Únete</a>
+        <a href="prensa.html">Prensa</a>
+    </nav>
+  
+    <main>
+        <section class="salud-section">
+            <h2>La Salud en el Deporte</h2>
+            <p>
+                El deporte de alto rendimiento no solo exige fuerza, disciplina y talento, también requiere un enfoque integral
+                de salud física, mental y médica. En <i>Pasión Que Sana</i>, creemos que cuidar del cuerpo y la mente es parte
+                esencial del juego.
+            </p>
+
+            <p>
+                Hoy, gracias a los avances en medicina deportiva, prevención de lesiones y salud emocional, los atletas tienen
+                la oportunidad de prolongar sus carreras, recuperarse con mayor eficacia y tener una mejor calidad de vida en
+                general.
+            </p>
+
+            <h3>En esta sección aprenderás sobre:</h3>
+            
+            <div class="salud-carousel-contenedor">
+                <div class="salud-imagen-lateral">
+                    <img src="img-salud-izq.png" alt="Salud Izq">
+                </div>
+
+                <div class="salud-carousel">
+                    <button class="salud-prev"> ← </button>
+                    <div class="salud-track-wrapper">
+                        <div class="salud-track">
+                            <div class="salud-slide">
+                                <h4>Medicina preventiva en el deporte</h4>
+                                <p>
+                                    Conocer las señales de alerta, identificar factores de riesgo y actuar a tiempo puede marcar la diferencia
+                                    entre una carrera interrumpida y una historia de éxito.
+                                </p>
+                            </div>
+                            <div class="salud-slide">
+                                <h4>Salud mental y alto rendimiento</h4>
+                                <p>
+                                    El equilibrio emocional es clave para enfrentar la presión, la competencia y las recuperaciones. Nuestros
+                                    embajadores comparten cómo la salud mental se volvió parte esencial de su entrenamiento.
+                                </p>
+                            </div>
+                            <div class="salud-slide">
+                                <h4>Rehabilitación y fisioterapia moderna</h4>
+                                <p>
+                                    Exploramos cómo el uso de tecnología y programas de recuperación personalizados ayudan a sanar mejor y 
+                                    más rápido.
+                                </p>
+                            </div>
+                            <div class="salud-slide">
+                                <h4>Hábitos saludables para el día a día</h4>
+                                <p>
+                                    Desde la nutrición hasta el descanso, pasando por el autocuidado, promovemos prácticas que fortalecen 
+                                    al deportista más allá del campo o el ring.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="salud-next"> → </button>
+                </div>
+
+                <div class="salud-imagen-lateral">
+                    <img src="img-salud-der.png" alt="Salud Der">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Johnson & Johnson MedTech México</p>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.salud-track');
+        const slides = document.querySelectorAll('.salud-slide');
+        const prevButton = document.querySelector('.salud-prev');
+        const nextButton = document.querySelector('.salud-next');
+
+        let index = 0;
+
+        function updateCarousel() {
+            const offset = -index * 100;
+            track.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : slides.length - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index < slides.length - 1) ? index + 1 : 0;
+            updateCarousel();
+        });
+
+        updateCarousel();
+    </script>
+</body>
+</html>
