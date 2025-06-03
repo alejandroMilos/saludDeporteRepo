@@ -5,7 +5,43 @@ body {
   color: #222;
 }
 
-header, footer {
+.custom-header {
+  background-color: #eb1700;
+  padding: 1rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.titulo-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.linea-vida {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: white;
+}
+
+footer {
   background-color: #eb1700;
   color: white;
   text-align: center;
