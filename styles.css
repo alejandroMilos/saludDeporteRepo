@@ -171,29 +171,31 @@ main {
 }
 
 .mosaic-overlay-text {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 2;
+  justify-content: center;
   text-align: center;
-  color: white;
-  padding: 2rem;
+  gap: 1rem;
 }
 
-.mosaic-overlay-text h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
+.mosaic-overlay-text img {
+  max-width: 450px;
+  height: auto;
+  margin-bottom: 0.3rem;
 }
 
-.mosaic-overlay-text p {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+.logo-jj {
+  max-width: 200px;
+}
+
+.logo-pqs {
+  max-width: 300px;
 }
 
 .hero-grid {
   display: grid;
-  /* grid-template-columns: 1fr 2fr 1fr; */
   gap: 2rem;
   align-items: center;
   max-width: 1450px;
