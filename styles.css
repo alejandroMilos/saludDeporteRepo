@@ -41,11 +41,69 @@ body {
   color: white;
 }
 
-footer {
+.custom-footer {
   background-color: #eb1700;
   color: white;
-  text-align: center;
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 3rem;
+  font-size: 0.85rem;
+  gap: 2rem;
+}
+
+.footer-left, 
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-title {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-redes img {
+  height: 25px;
+  width: 25px;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-right {
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #f490a0;
 }
 
 nav {
