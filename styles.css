@@ -1021,30 +1021,135 @@ a.btn-register {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.prensa-banner {
-  background-image: url('fondo_prensa.png');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  animation: fadeIn 1s ease;
+.prensa-bienvenida {
+  text-align: center;
+  padding: 3rem 1.5rem;
 }
 
-.prensa-banner::before {
-  content: "";
+.prensa-bienvenida h2 {
+  color: #111;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.prensa-bienvenida p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 800px;
+  margin: auto;
+}
+
+.prensa-registro-banner {
+  background-color: #eb1700;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-banner {
+  margin-top: 1rem;
+  background: white;
+  color: #eb1700;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prensa-material .material-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prensa-material {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0 auto 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prensa-material .material-left,
+.prensa-material .material-right {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+
+.prensa-material .material-right {
+  background-color: #eb1700;
+  color: white;
+  padding: 10.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prensa-material .material-right h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.prensa-material .btn-material {
+  background-color: white;
+  color: #eb1700;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.prensa-enlaces-destacados {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0 auto 3rem;
+}
+
+.prensa-enlaces-destacados .enlace-prensa {
+  position: relative;
+  flex: 0 0 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.enlace-prensa:hover {
+  transform: scale(1.02);
+}
+
+.enlace-prensa img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.enlace-prensa .overlay {
   position: absolute;
-  inset: 0;
-  backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 255, 0.4);
-  z-index: 1;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.prensa-banner .info-text {
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.info-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .embajadores-section {
