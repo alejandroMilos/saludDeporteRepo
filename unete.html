@@ -23,50 +23,46 @@
     </nav>
   
     <main>
-        <section class="unete-libro">
-            <div class="unete-img">
-                <img src="img-unete.png" alt="Imagen Únete">
+        <section class="embajadores-section">
+            <h2 class="embajadores-title">
+                NO ES SOLO UNA CAMPAÑA, ES UNA COMUNIDAD VIVA QUE SE CONSTRUYE CON HISTORIAS REALES,
+                ESFUERZOS COMPARTIDOS Y PASIÓN POR EL DEPORTE.
+            </h2>
+            <p class="embajadores-subtitle">¡Conoce a nuestros embajadores!</p>
+
+            <div class="embajadores-grid">
+                <div class="embajador">
+                    <img src="jerry-galindo.png" alt="Jerry Galindo">
+                    <p class="nombre">JERRY GALINDO</p>
+                </div>
+
+                <div class="embajador">
+                    <img src="alexia-villanueva.png" alt="Alexia Villanueva">
+                    <p class="nombre">ALEXIA VILLANUEVA</p>
+                </div>
+
+                <div class="embajador">
+                    <img src="olaf-morelos.png" alt="Olaf Morelos">
+                    <p class="nombre">OLAF MORELOS</p>
+                </div>
             </div>
-            <div class="unete-contenido">
-                <div class="pagina pagina-activa" id="pagina1">
-                    <h2>Conviértete en embajador de la salud y comparte tu historia</h2>
-                    <p>
-                        <b>Pasión Que Sana</b> no es solo una campaña, es una comunidad viva que se construye con historias reales,
-                        esfuerzos compartidos y pasión por el deporte.
-                    </p>
-                    <p>
-                        ¿Eres atleta, médico, entrenador, padre de familia, estudiante o simplemente alguien que ha vivido una
-                        experiencia transformadora gracias al cuidado de tu salud física o mental? ¡Queremos escucharte!
-                    </p>
-                </div>
-                
-                <div class="pagina" id="pagina2">
-                    <h3>Cuéntanos tu historia</h3>
-                    <p>
-                        Cada testimonio es una oportunidad para inspirar a otros. Comparte cómo enfrentaste un reto físico, superaste
-                        una lesión, cuidaste tu salud mental o cómo la tecnología médica cambió tu vida deportiva.
-                    </p>
 
-                    <h3>Forma parte de nuestra red de embajadores</h3>
-                    <p>
-                        Te conviertes en portavoz de un movimiento que promueve la salud y la innovación. Recibirás acceso a webinars,
-                        talleres y más.
-                    </p>
-                </div>
+            <div class="texto-central">
+                <p>¿Eres atleta y has vivido una experiencia que marcó tu vida gracias al cuidado de tu salud física y mental en el deporte?</p>
+                <p>¡Queremos conocer tu historia e inspirar a otros contigo! Súmate a Pasión Que Sana y sé parte del cambio.</p>
+            </div>
 
-                <div class="pagina" id="pagina3">
-                    <h3>Inspira a nuevas generaciones</h3>
-                    <p>
-                        Tu historia puede motivar a alguien más a cuidarse o buscar ayuda médica. Detrás de cada logro deportivo, hay
-                        una historia de ciencia y voluntad.
-                    </p>
-                </div>
+            <div class="formulario">
+                <h3>COMPARTE TU HISTORIA</h3>
+                <form>
+                    <label for="nombre">NOMBRE:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-                <div class="navegacion-paginas">
-                    <button onclick="cambiarPagina(-1)">←</button>
-                    <span id="contador-pagina">1 / 3</span>
-                    <button onclick="cambiarPagina(1)">→</button>
-                </div>
+                    <label for="email">CORREO:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button type="submit">ENVIAR</button>
+                </form>
             </div>
         </section>
     </main>

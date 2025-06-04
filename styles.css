@@ -1047,69 +1047,120 @@ a.btn-register {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.unete-libro {
-  display: flex;
-  min-height: 80vh;
-  background: linear-gradient(to right, #eb1700 50%, #fff 50%);
-  padding: 2rem;
-  color: white;
-  animation: fadeIn 1s ease;
+.embajadores-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
 }
 
-.unete-img {
-  flex: 1;
+.embajadores-title {
+  color: #e10814;
+  font-size: 1.6rem;
+  font-weight: bold;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  text-transform: uppercase;
+}
+
+.embajadores-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.embajadores-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.unete-img img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+.embajador {
+  text-align: center;
+  transition: transform 0.4s ease;
 }
 
-.unete-contenido {
-  flex: 1;
-  background-color: white;
-  color: #222;
-  margin-left: 2rem;
-  border-radius: 12px;
+.embajador img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e10814;
+  transition: transform 0.4s ease;
+}
+
+.embajador:hover img {
+  transform: scale(1.1);
+}
+
+.nombre {
+  font-weight: bold;
+  color: #e10814;
+  margin-top: 0.8rem;
+}
+
+.texto-central {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  animation: fadeInUp 1s ease;
+}
+
+.formulario {
+  background: white;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease;
 }
 
-.pagina {
-  display: none;
-  animation: flipPage 0.6s ease-in-out;
+.formulario h3 {
+  color: #e10814;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-.pagina-activa {
+.formulario label {
   display: block;
+  text-align: left;
+  font-weight: bold;
+  color: #e10814;
+  margin: 0.5rem 0 0.3rem;
 }
 
-.navegacion-paginas {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+.formulario input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: 2px solid #e10814;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s;
 }
 
-.navegacion-paginas button {
-  background-color: #eb1700;
+.formulario input:focus {
+  box-shadow: 0 0 8px rgba(255, 8, 20, 0.4);
+}
+
+.formulario button {
+  background-color: #e10814;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.navegacion-paginas button:hover {
-  background-color: #e10814;
+.formulario button:hover {
+  background-color: #c00000;
+  transform: scale(1.05);
 }
 
 .btn-group {
@@ -1121,6 +1172,17 @@ a.btn-register {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes flipPage {
