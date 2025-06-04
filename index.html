@@ -64,23 +64,59 @@
       </div>
     </section>
 
-    <section class="busqueda">
-      <h3>¿Qué buscamos con esta iniciativa?</h3>
-      <div class="card-container zoom-effect">
-        <div class="card">Promover la salud física y mental en cada etapa del deporte</div>
-        <div class="card">Educar sobre la prevención y el tratamiento de lesiones</div>
-        <div class="card">Impulsar el uso de tecnología médica innovadora</div>
-        <div class="card">Inspirar a jóvenes atletas y sus comunidades</div>
+    <section class="carousel-busqueda">
+      <div class="carousel-slide active">
+        <img src="img-volley.png" alt="Volley" class="carousel-img">
+        <div class="carousel-text">
+          <h3>¿Qué buscamos con esta iniciativa?</h3>
+          <p>Promover la <b>salud física y mental</b> en cada etapa del <b>deporte.</b></p>
+        </div>
       </div>
+      
+      <div class="carousel-slide">
+        <img src="img-futbol.png" alt="Fútbol" class="carousel-img">
+        <div class="carousel-text">
+          <h3>¿Qué buscamos con esta iniciativa?</h3>
+          <p><b>Educar</b> sobre la <b>prevención</b> y el <b>tratamiento de lesiones.</b></p>
+        </div>
+      </div>
+        
+      <div class="carousel-slide">
+        <img src="img-gimnasia.png" alt="Gimnasia" class="carousel-img">
+        <div class="carousel-text">
+          <h3>¿Qué buscamos con esta iniciativa?</h3>
+          <p><b>Impulsar</b> el uso de <b>tecnología médica</b> innovadora.</p>
+        </div>
+      </div>
+      
+      <div class="carousel-slide">
+        <img src="img-boxeo.png" alt="Boxeo" class="carousel-img">
+        <div class="carousel-text">
+          <h3>¿Qué buscamos con esta iniciativa?</h3>
+          <p><b>Inspirar</b> a <b>atletas jóvenes</b> y sus <b>comunidades.</b></p>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button id="prev-btn">&#8592;</button>
+        <button id="next-btn">&#8594;</button>
+      </div>
+      <div class="carousel-dots" id="dots-container"></div>
     </section>
 
-    <section class="objetivos">
-      <h3>Nuestro Objetivo</h3>
-      <div class="card-container zoom-effect">
-        <div class="card">Concientización en salud física y mental</div>
-        <div class="card">Educación médica preventiva</div>
-        <div class="card">Impulso a la innovación médica en el deporte</div>
-        <div class="card">Posicionamiento como líder en salud deportiva</div>
+    <section class="objetivos-box">
+      <div class="objetivos-contenido">
+        <img src="logo-jj-rojo.png" alt="Johnson & Johnson MedTech" class="objetivos-logo">
+        <h2 class="objetivos-titulo">Nuestro <br>Objetivo</h2>
+        <ul class="objetivos-lista">
+          <li><img src="check-icon.png" alt="Check"> Concientización en salud física y mental</li>
+          <li><img src="check-icon.png" alt="Check"> Educación médica preventiva</li>
+          <li><img src="check-icon.png" alt="Check"> Impulso a la innovación médica en el deporte</li>
+          <li><img src="check-icon.png" alt="Check"> Posicionamiento como líder en salud deportiva</li>
+        </ul>
+      </div>
+      <div class="objetivos-imagen">
+        <img src="objetivo-fisioterapia.png" alt="Fisioterapia rodilla">
       </div>
     </section>
   </main>  
@@ -107,5 +143,41 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('dots-container');
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+      });
+
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('carousel-dot');
+        if (index === currentSlide) dot.classList.add('active-dot');
+        dot.addEventListener('click', () => {
+          currentSlide = index;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    });
+
+    updateCarousel();
+  </script>
 </body>
 </html>
